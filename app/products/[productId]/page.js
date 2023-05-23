@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
+import QuantityButton from '../../QuantityButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,12 +19,15 @@ export default function ProductPage({ params }) {
 
   return (
     <main>
-      <h1>{params.name}</h1>
+      <h1>{singleProduct.name}</h1>
       <Image
+        data-test-id="product-image"
         src={`/images/${singleProduct.type}.png`}
         width={200}
         height={200}
       />
+      <p data-test-id="product-price"> Price ${singleProduct.price}</p>
+      <QuantityButton />
     </main>
   );
 }

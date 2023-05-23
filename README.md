@@ -69,7 +69,6 @@ pnpm dev
 [x] Add an anchor element (a link) with an attribute of `data-test-id="product-<product id>"` that links to individual product pages
 
 [x] The header (described below) needs to have a link to the products page with the HTML attribute `data-test-id="products-link"`
-
 [x] A header with a link to the Cart, showing the number of items in the cart
 [x] This header needs to appear on all pages
 [x] The header needs to use the HTML `<header>` element
@@ -83,18 +82,18 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 [x] A Products page (where all the products are listed)
 [x] Minimum of 4 different products
 [x] The page should have a relevant `h1` element
-[] Each product needs to be contained in an anchor element (a link) with an attribute of `data-test-id="product-<product id>"`
+[x] Each product needs to be contained in an anchor element (a link) with an attribute of `data-test-id="product-<product id>"`
 [x] This link will lead to its single product page
 
 [x] The header (described below) needs to have a link to the products page with the HTML attribute `data-test-id="products-link"`
 
-[] A page for each single product (when you click on the product it goes to this page) with ability to add a quantity to the cart
+[x] A page for each single product (when you click on the product it goes to this page) with ability to add a quantity to the cart
 
 [x] The single product URL needs to contain the `id` (eg. `/products/<product id>`)
 
 [x] The product name needs to be directly inside an `h1` element (it should be the only `h1`)
 
-[] The product image needs to be in an `img` element with the HTML attribute `data-test-id="product-image"`
+[x] The product image needs to be in an `img` element with the HTML attribute `data-test-id="product-image"`
 
 [] The product price (without any currency symbol or thousands separator) needs to be directly inside an element with the HTML attribute `data-test-id="product-price"`
 

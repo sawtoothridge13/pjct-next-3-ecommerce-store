@@ -1,4 +1,5 @@
 import Image from 'next/dist/client/image';
+import React from 'react';
 import logo from '../public/images/devbevslogo.png';
 import GenerateButton from './GenerateButton';
 import styles from './layout.module.scss';
