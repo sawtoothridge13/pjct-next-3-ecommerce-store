@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
+import AddToCartButton from '../../AddToCartButton';
 import QuantityButton from '../../QuantityButton';
 
 export const dynamic = 'force-dynamic';
@@ -27,7 +28,8 @@ export default function ProductPage({ params }) {
         height={200}
       />
       <p data-test-id="product-price"> Price ${singleProduct.price}</p>
-      <QuantityButton />
+      <QuantityButton data-test-id="product-quantity" />
+      <AddToCartButton data-test-id="product-add-to-cart" />
     </main>
   );
 }

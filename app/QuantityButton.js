@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export default function QuantityButton() {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <>

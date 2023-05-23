@@ -97,9 +97,9 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 
 [] The product price (without any currency symbol or thousands separator) needs to be directly inside an element with the HTML attribute `data-test-id="product-price"`
 
-[] The quantity input needs to have the HTML attribute `data-test-id="product-quantity"`
+[x] The quantity input needs to have the HTML attribute `data-test-id="product-quantity"`
 
-[] The starting quantity should be `1`
+[x] The starting quantity should be `1`
 
 [] The add to cart button needs to have the HTML attribute `data-test-id="product-add-to-cart"`
 [] Clicking this button will add the amount from the product quantity input to any quantity of this product already in the cart
