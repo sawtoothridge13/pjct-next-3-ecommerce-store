@@ -1,5 +1,8 @@
-import Image from 'next/dist/client/image';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { getProductById } from '../../../database/products';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: '{devBevs} | Products',
@@ -7,7 +10,7 @@ export const metadata = {
 };
 
 export default function ProductPage({ params }) {
-  const singleProduct = products.find((product) => product.id === params.id);
+  const singleProduct = getProductById(Number(params.productId));
 
   if (!singleProduct) {
     notFound();
@@ -15,8 +18,12 @@ export default function ProductPage({ params }) {
 
   return (
     <main>
-      <h1>{singleProduct.id}</h1>
-      <Image src={`/images/${singleProduct.id}.png`} width={200} height={200} />
+      <h1>{params.name}</h1>
+      <Image
+        src={`/images/${singleProduct.type}.png`}
+        width={200}
+        height={200}
+      />
     </main>
   );
 }

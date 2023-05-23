@@ -1,6 +1,6 @@
 import Image from 'next/dist/client/image';
-import logo from '../app/public/images/devbevslogo.png';
-import { GenerateButton } from './GenerateButton';
+import logo from '../public/images/devbevslogo.png';
+import GenerateButton from './GenerateButton';
 import styles from './layout.module.scss';
 
 export default function Home() {
