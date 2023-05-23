@@ -1,0 +1,15 @@
+.photos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.backgroundPhoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=Wine.module.css.map */

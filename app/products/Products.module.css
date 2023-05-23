@@ -1,0 +1,31 @@
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.productname {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoDiv {
+  display: inline-block;
+  margin: 20px;
+}
+
+.photos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}/*# sourceMappingURL=Products.module.css.map */

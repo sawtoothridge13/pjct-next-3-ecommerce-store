@@ -1,0 +1,44 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #fff;
+  gap: 40px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    flex: 1;
+
+    li {
+      display: flex;
+      padding: 32px 0;
+      font-weight: 500;
+      width: 100%;
+    }
+  }
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
