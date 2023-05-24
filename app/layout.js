@@ -5,12 +5,6 @@ import styles from './layout.module.scss';
 
 const inter = Fira_Code({ subsets: ['latin'] });
 
-export const metadata = {
-  title: { default: 'Next Example | devBevs', template: '%s | devBevs' },
-  description:
-    'A line of adult beverages brewed, vinified, and distilled with the tears of software and web developers. ',
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

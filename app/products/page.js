@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { products } from '../../database/products';
 
 export const metadata = {
-  title: 'Products Page',
+  title: `devBevs | Products`,
   description: 'My products',
 };
 

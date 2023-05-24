@@ -7,8 +7,9 @@ import QuantityButton from '../../QuantityButton';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: '{devBevs} | Products',
-  description: 'All of {devBevs} products',
+  title: `devBevs | Product`,
+  description:
+    'Choose quantity of product, read product description and add item to cart',
 };
 
 export default function ProductPage({ params }) {
