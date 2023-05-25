@@ -24,9 +24,9 @@ export default function ProductPage({ params }) {
       <h1>{singleProduct.name}</h1>
       <Image
         data-test-id="product-image"
-        src={`/images/${singleProduct.type}.png`}
-        width={200}
-        height={200}
+        src={`/images/${singleProduct.image}.png`}
+        width={600}
+        height={600}
       />
       <p data-test-id="product-price"> Price ${singleProduct.price}</p>
       <QuantityButton data-test-id="product-quantity" />

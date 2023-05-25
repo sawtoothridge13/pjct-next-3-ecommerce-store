@@ -17,9 +17,11 @@ export default function ProductPage() {
             <Link href={`/products/${product.id}`}>{product.name}</Link>
             <br />
             <Image
-              src={`/images/${product.type}.png`}
-              width={300}
-              height={300}
+              src={`/images/${product.image}.png`}
+              alt={product.alt}
+              width={400}
+              height={400}
+              border={5}
             />
           </div>
         );

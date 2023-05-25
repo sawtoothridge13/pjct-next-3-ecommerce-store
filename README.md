@@ -95,7 +95,7 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 
 [x] The product image needs to be in an `img` element with the HTML attribute `data-test-id="product-image"`
 
-[] The product price (without any currency symbol or thousands separator) needs to be directly inside an element with the HTML attribute `data-test-id="product-price"`
+[x] The product price (without any currency symbol or thousands separator) needs to be directly inside an element with the HTML attribute `data-test-id="product-price"`
 
 [x] The quantity input needs to have the HTML attribute `data-test-id="product-quantity"`
 
