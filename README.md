@@ -101,7 +101,7 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 
 [x] The starting quantity should be `1`
 
-[] The add to cart button needs to have the HTML attribute `data-test-id="product-add-to-cart"`
+[x] The add to cart button needs to have the HTML attribute `data-test-id="product-add-to-cart"`
 [] Clicking this button will add the amount from the product quantity input to any quantity of this product already in the cart
 [] For example, if the amount in the product quantity input is `2` and the existing quantity of this product in the cart is `3`, then after clicking the button, the quantity of this product in the cart will become `5`
 

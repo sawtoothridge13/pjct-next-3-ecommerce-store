@@ -18,7 +18,6 @@ export default function ProductPage() {
             <br />
             <Image
               src={`/images/${product.image}.png`}
-              alt={product.alt}
               width={400}
               height={400}
               border={5}

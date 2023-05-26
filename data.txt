@@ -1,0 +1,13 @@
+createOrUpdateComment = createOrUpdateCartProducts
+
+fruitId = productId
+
+comment = productCount
+
+fruitCommentsCookie = cartProductsCookie
+
+fruitComment = cartProduct
+
+fruitComments = allCartProducts
+
+fruitToUpdate = productToUpdate
