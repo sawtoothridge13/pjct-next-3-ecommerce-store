@@ -4,43 +4,43 @@ import { cookies } from 'next/headers';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
 
-export async function createOrUpdateCartProducts(productId, productCount) {
+export async function createOrUpdateCartQuantity(productId, cartQuantity) {
   // 1. get the current cookie
   // This get the cookies from the Request Headers
-  const cartProductsCookie = getCookie('AllCartProducts');
+  const cartCookie = getCookie('cartQuantity');
   // 2. we parse the cookie
-  const allCartProducts = !cartProductsCookie
+  const cart = !cartCookie
     ? // case A: cookie is undefined
       // undefined
-      // we need to create the new array with the fruitComment inside
+      // we need to create the new array with the singProductQuantity inside
       []
-    : parseJson(cartProductsCookie);
+    : parseJson(cartCookie);
 
   // 3. we edit the object
 
   // We get the object for the product in cookies or undefined
-  const productToUpdate = allCartProducts.find((cartProduct) => {
-    return cartProduct.id === productId;
+  const quantityToUpdate = cart.find((productQuantity) => {
+    return productQuantity.id === productId;
   });
 
   // case B: the cookie is defined but have the product in the action
   // if we are in product 1
   // [{id:1, productCount:"abc"}]
-  if (productToUpdate) {
+  if (quantityToUpdate) {
     // we need to update the cartProduct
-    productToUpdate.productCount = productCount;
+    quantityToUpdate.cartQuantity += cartQuantity;
   } else {
     // case C: the cookie is defined but doesn't have product in the action
     // if we are in product 1
     // [{id:2, productCount:"abc"}]
-    allCartProducts.push({
+    cart.push({
       // we need insert the cartProduct
       id: productId,
-      productCount,
+      cartQuantity,
     });
   }
 
   // 4. we override the cookie
   // This set the cookies into the Response Headers
-  await cookies().set('fruitComments', JSON.stringify(allCartProducts));
+  await cookies().set('cart', JSON.stringify(cart));
 }

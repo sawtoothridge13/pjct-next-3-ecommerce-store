@@ -1,13 +1,17 @@
-createOrUpdateComment = createOrUpdateCartProducts
+createOrUpdateComment = createOrUpdateCartQuantity
+
+fruit = product
 
 fruitId = productId
 
-comment = productCount
+comment = cart
 
-fruitCommentsCookie = cartProductsCookie
+fruitComment = productQuantity
 
-fruitComment = cartProduct
+fruitComments = cartQuantities
 
-fruitComments = allCartProducts
+fruitCommentsCookie = cartQuantitiesCookie
 
-fruitToUpdate = productToUpdate
+fruitToUpdate = quantityToUpdate
+
+fruitsWithComments = productsWithQuantity

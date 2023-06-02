@@ -67,6 +67,7 @@ pnpm dev
 
 [x] Create product page for each of 4 products
 [x] Add an anchor element (a link) with an attribute of `data-test-id="product-<product id>"` that links to individual product pages
+[x] A page for each single product (when you click on the product it goes to this page) with ability to add a quantity to the cart
 
 [x] The header (described below) needs to have a link to the products page with the HTML attribute `data-test-id="products-link"`
 [x] A header with a link to the Cart, showing the number of items in the cart
@@ -107,6 +108,8 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 
 [] Negative quantity values should not be possible
 
+- CART PAGE:
+
 [] A Cart page (containing a list where products appear when you click on the "Add to cart" button on the single product page), which also shows the total price of all products
 
 [] Each product needs to be contained in an element with the HTML attribute `data-test-id="cart-product-<product id>"`
@@ -118,7 +121,10 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 [] The checkout button needs to have the HTML attribute `data-test-id="cart-checkout"`
 [] Negative quantity values should not be possible
 
+- CHECKOUT PAGE
+
 [] A Checkout page which shows the total and asks for shipping and payment information (when you click on the "Checkout" button on the Cart page it navigates to the checkout page)
+
 [] The first name input needs to have the HTML attribute `data-test-id="checkout-first-name"`
 [] The last name input needs to have the HTML attribute `data-test-id="checkout-last-name"`
 [] The email input needs to have the HTML attribute `data-test-id="checkout-email"`
@@ -129,17 +135,23 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 [] The credit card input needs to have the HTML attribute `data-test-id="checkout-credit-card"`
 [] The expiration date input needs to have the HTML attribute `data-test-id="checkout-expiration-date"`
 [] The security code input needs to have the HTML attribute `data-test-id="checkout-security-code"`
-[] The form should prevent submission with any of the above fields being empty
+
+    [] The form should prevent submission with any of the above fields being empty
+
 [] The Confirm Order button needs to have the HTML attribute `data-test-id="checkout-confirm-order"`
+
 [] Privacy: don't save user information (payment or other personal information) anywhere (unless you have a privacy policy and are creating a real ecommerce store)
 
-[] A Thank You page after a checkout has been completed
-[] The page title should include `Thank you for your order`
+- THANK YOU PAGE
+
+  [] A Thank You page after a checkout has been completed
+  [] The page title should include `Thank you for your order`
 
 [] A header with a link to the Cart, showing the number of items in the cart
 [] This header needs to appear on all pages
 [] The header needs to use the HTML `<header>` element
 [] The number of items is the sum of the quantity of all products (eg. if you have 2 apples and 3 bananas in your cart, the number of items is 5)
+
 [] The number of items needs to update when you add or remove items from the cart
 [] The link needs to have an HTML attribute `data-test-id="cart-link"`
 [] The count needs to be contained in an element with the HTML attribute `data-test-id="cart-count"`

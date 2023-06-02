@@ -1,7 +1,6 @@
 import Image from 'next/dist/client/image';
 import React from 'react';
 import logo from '../public/images/devbevslogo2.png';
-import GenerateButton from './GenerateButton';
 import styles from './layout.module.scss';
 
 export const metadata = {
@@ -25,7 +24,6 @@ export default function Home() {
       <section className={styles.section}>
         <Image src={logo} alt="devbevs logo" className={styles.logo} />
       </section>
-      <GenerateButton>Generate</GenerateButton>
     </main>
   );
 }
