@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function QuantityButton() {
+export default function QuantityButton(props) {
   const [singleProductQuantity, setSingleProductQuantity] = useState(1);
 
   return (

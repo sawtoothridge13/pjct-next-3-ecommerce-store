@@ -21,6 +21,13 @@ export default function RootLayout({ children }) {
               <li>
                 <Link href="/products">Products</Link>
               </li>
+
+              <li>
+                <Link href="/cart">Cart</Link>
+              </li>
+              <li>
+                <Link href="/checkout">Checkout</Link>
+              </li>
               <li>
                 <Link href="/about">About</Link>
               </li>

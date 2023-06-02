@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
-import AddToCartComponent from './components/AddToCartComponent';
-import QuantityButton from './components/QuantityButton';
+import AddToCartComponent from '../../components/AddToCartComponent';
+import QuantityButton from '../../components/QuantityButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,24 +18,12 @@ type Props = {
   params: { productId: string };
 };
 
-type Cookie = {
-  id: number;
-  cartQuantity?: number;
-};
-
 export default function ProductPage(props: Props) {
   const product = getProductById(Number(props.params.productId));
 
   if (!product) {
     notFound();
   }
-
-  const cartCookie = getCookie('cartQuantity');
-  const cart: Cookie[] = !cartCookie ? [] : parseJson(cartCookie);
-
-  const quantityToUpdate = cart.find((productQuantity) => {
-    return productQuantity.id === product.id;
-  });
 
   return (
     <main>
@@ -47,9 +35,9 @@ export default function ProductPage(props: Props) {
         width={600}
         height={600}
       />
-      {quantityToUpdate?.cartQuantity}
+
       <p data-test-id="product-price"> Price ${product.price}</p>
-      {/* <QuantityButton productId={product.id} data-test-id="product-quantity" /> */}
+      {/* <QuantityButton quantity={product.quantity} data-test-id="product-quantity" /> */}
       <AddToCartComponent
         productId={product.id}
         data-test-id="product-add-to-cart"

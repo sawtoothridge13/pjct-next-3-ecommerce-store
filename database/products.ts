@@ -1,9 +1,9 @@
 type Product = {
   id: number;
   name: string;
-  slug: string;
   image: string;
   alt: string;
+  quantity: number;
   price: number;
 };
 
@@ -11,34 +11,34 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'JavaScript Java',
-    slug: 'javascriptjava',
     image: 'coffee',
     alt: 'bag of coffee',
-    price: 10,
+    quantity: 1,
+    price: 12,
   },
   {
     id: 2,
     name: 'API : IPA',
-    slug: 'apiipa',
     image: 'beer',
     alt: 'beer bottle',
-    price: 10,
+    quantity: 1,
+    price: 6,
   },
   {
     id: 3,
     name: 'camelCaseCabernet',
-    slug: 'camelcasecabernet',
     image: 'wine1',
     alt: 'wine bottle',
-    price: 10,
+    quantity: 1,
+    price: 23,
   },
   {
     id: 4,
     name: 'Error 500',
-    slug: 'error500',
     image: 'whiskey',
     alt: 'whiskey bottle',
-    price: 10,
+    quantity: 1,
+    price: 48,
   },
 ];
 

@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { createOrUpdateCartQuantity } from '../actions';
+import { createOrUpdateCartQuantity } from '../products/[productId]/actions';
 
 export default function AddToCartComponent(props) {
   const [cartQuantity, setCartQuantity] = useState('');
@@ -15,6 +15,7 @@ export default function AddToCartComponent(props) {
     <div>
       {productQuantity}
       <br />
+
       <button
         onClick={() =>
           setProductQuantity(
@@ -27,21 +28,23 @@ export default function AddToCartComponent(props) {
       <button onClick={() => setProductQuantity(productQuantity + 1)}>+</button>
 
       {/* <label>{updatedCartQuantity}</label> */}
-      <textarea
+      <input
         value={cartQuantity}
         onChange={(event) => {
           setCartQuantity(event.currentTarget.value);
         }}
       />
-      <button
-        onClick={async () => {
-          router.refresh();
-          setCartQuantity(productQuantity);
-          await createOrUpdateCartQuantity(props.productId, cartQuantity);
-        }}
-      >
-        Add To Cart
-      </button>
+      <form>
+        <button
+          formAction={async () => {
+            router.refresh();
+            await createOrUpdateCartQuantity(props.productId, productQuantity);
+            setProductQuantity(1);
+          }}
+        >
+          Add To Cart
+        </button>
+      </form>
     </div>
   );
 }
