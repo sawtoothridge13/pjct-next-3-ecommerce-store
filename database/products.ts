@@ -3,7 +3,6 @@ type Product = {
   name: string;
   image: string;
   alt: string;
-  quantity: number;
   price: number;
 };
 
@@ -13,7 +12,6 @@ export const products: Product[] = [
     name: 'JavaScript Java',
     image: 'coffee',
     alt: 'bag of coffee',
-    quantity: 1,
     price: 12,
   },
   {
@@ -21,7 +19,6 @@ export const products: Product[] = [
     name: 'API : IPA',
     image: 'beer',
     alt: 'beer bottle',
-    quantity: 1,
     price: 6,
   },
   {
@@ -29,7 +26,6 @@ export const products: Product[] = [
     name: 'camelCaseCabernet',
     image: 'wine1',
     alt: 'wine bottle',
-    quantity: 1,
     price: 23,
   },
   {
@@ -37,7 +33,6 @@ export const products: Product[] = [
     name: 'Error 500',
     image: 'whiskey',
     alt: 'whiskey bottle',
-    quantity: 1,
     price: 48,
   },
 ];

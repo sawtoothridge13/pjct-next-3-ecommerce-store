@@ -28,12 +28,13 @@ export default function AddToCartComponent(props) {
       <button onClick={() => setProductQuantity(productQuantity + 1)}>+</button>
 
       {/* <label>{updatedCartQuantity}</label> */}
-      <input
+      {/* <input
+        type="number"
         value={cartQuantity}
         onChange={(event) => {
           setCartQuantity(event.currentTarget.value);
         }}
-      />
+      /> */}
       <form>
         <button
           formAction={async () => {
