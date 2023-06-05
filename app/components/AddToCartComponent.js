@@ -5,11 +5,8 @@ import { useState } from 'react';
 import { createOrUpdateCartQuantity } from '../products/[productId]/actions';
 
 export default function AddToCartComponent(props) {
-  const [cartQuantity, setCartQuantity] = useState('');
   const [productQuantity, setProductQuantity] = useState(1);
   const router = useRouter();
-
-  // const [quantity, setQuantity] = useState(1);
 
   return (
     <div>
@@ -27,14 +24,6 @@ export default function AddToCartComponent(props) {
       </button>
       <button onClick={() => setProductQuantity(productQuantity + 1)}>+</button>
 
-      {/* <label>{updatedCartQuantity}</label> */}
-      {/* <input
-        type="number"
-        value={cartQuantity}
-        onChange={(event) => {
-          setCartQuantity(event.currentTarget.value);
-        }}
-      /> */}
       <form>
         <button
           formAction={async () => {

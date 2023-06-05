@@ -44,3 +44,14 @@ export async function createOrUpdateCartQuantity(id, quantity) {
   // This set the cookies into the Response Headers
   await cookies().set('cart', JSON.stringify(cart));
 }
+
+export async function getQuantities() {
+  // 1. Get the current cookie from the Request Headers
+  const cartCookie = await getCookie('cart');
+  // 2. Parse the cookie
+  const productQuantities = !cartCookie
+    ? [] // 3. Create a new array with the productQuantity
+    : parseJson(cartCookie);
+
+  return productQuantities;
+}

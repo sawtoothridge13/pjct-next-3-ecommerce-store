@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function ProductPage() {
   // This is what we want using cookies
-  const cartCookie = getCookie('cartQuantity');
+  const cartCookie = getCookie('cart');
 
   const cart = !cartCookie ? [] : parseJson(cartCookie);
 
@@ -38,7 +38,7 @@ export default function ProductPage() {
             width={400}
             height={400}
           />
-          {products.cartQuantity}
+          {products.cart}
         </div>
       ))}
     </main>

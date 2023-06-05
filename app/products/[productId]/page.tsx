@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
-import { getCookie } from '../../../util/cookies';
-import { parseJson } from '../../../util/json';
 import AddToCartComponent from '../../components/AddToCartComponent';
-import QuantityButton from '../../components/QuantityButton';
 
 export const dynamic = 'force-dynamic';
 
