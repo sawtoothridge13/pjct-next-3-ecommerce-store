@@ -15,7 +15,7 @@ export default function ProductPage() {
 
   const cart = !cartCookie ? [] : parseJson(cartCookie);
 
-  const productsWithQuantity = products.map((product) => {
+  const items = products.map((product) => {
     const matchingProductFromCookie = cart.find(
       (productObject) => product.id === productObject.id,
     );
@@ -28,7 +28,7 @@ export default function ProductPage() {
   return (
     <main>
       These are my products
-      {productsWithQuantity.map((product) => (
+      {items.map((product) => (
         <div key={`product-div-${product.id}`}>
           <Link href={`/products/${product.id}`}>{product.name}</Link>
           <br />
@@ -38,7 +38,6 @@ export default function ProductPage() {
             width={400}
             height={400}
           />
-          {products.cart}
         </div>
       ))}
     </main>
