@@ -110,7 +110,7 @@ Design and develop an ecommerce store using Next.js. It should have the followin
 
 - CART PAGE:
 
-[] A Cart page (containing a list where products appear when you click on the "Add to cart" button on the single product page), which also shows the total price of all products
+[x] A Cart page (containing a list where products appear when you click on the "Add to cart" button on the single product page), which also shows the total price of all products
 
 [] Each product needs to be contained in an element with the HTML attribute `data-test-id="cart-product-<product id>"`
 [] Inside the product element, the product name and price need to be be visible

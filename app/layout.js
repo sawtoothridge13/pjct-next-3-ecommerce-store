@@ -1,6 +1,7 @@
 import './globals.scss';
 import { Fira_Code } from 'next/font/google';
 import Link from 'next/link';
+import CartQuantity from './components/CartQuantity';
 import styles from './layout.module.scss';
 
 const inter = Fira_Code({ subsets: ['latin'] });
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <header className="header" data-test-id="products-link">
           <Link className="cartLink" href="/cart">
-            <span className={styles.cart}>Cart</span>
+            <CartQuantity className={styles.cart}>Cart</CartQuantity>
           </Link>
           <nav className={styles.navBar}>
             <ul>
