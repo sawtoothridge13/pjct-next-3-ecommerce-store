@@ -22,10 +22,21 @@ export default async function CartQuantity() {
     }
   });
 
-  console.log(
-    productsWithQuantity.reduce(
-      (total, product) => total + (product.quantity || 0),
-      0,
-    ),
+  const totalCartQuantity = productsWithQuantity.reduce(
+    (total, product) => total + (product.quantity || 0),
+    0,
+  );
+
+  return (
+    <>
+      {productsWithQuantity.map((cartProduct) => (
+        <div key={`product-div-${cartProduct.id}`}>
+          <span>
+            Cart
+            {totalCartQuantity}
+          </span>
+        </div>
+      ))}
+    </>
   );
 }

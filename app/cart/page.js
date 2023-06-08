@@ -1,6 +1,10 @@
+import { Updock } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductById, products } from '../../database/products';
+import CartQuantity from '../components/CartQuantity';
+import RemoveFromCartComponent from '../components/RemoveFromCartComponent';
+import UpDateQuantity from '../components/UpdateQuantity';
 import { getQuantities } from '../products/[productId]/actions';
 
 export default async function CartPage() {
@@ -32,18 +36,17 @@ export default async function CartPage() {
   );
 
   const totalCartPrice = productsWithQuantity.reduce(
-    (total, product) => total + (product.price || 0),
+    (total, product) => total + (product.price || 0) * (product.quantity || 0),
     0,
   );
 
   return (
-    <>
+    <main>
       {productsWithQuantity.map((cartProduct) => (
         <div key={`product-div-${cartProduct.id}`}>
-          <h1>
-Shopping Cart
-          </h1>
-          <Image
+          <h1>Shopping Cart</h1>
+          <section data-test-id={`cart-product-${cartProduct.id}`}>
+            <Image
               src={`/images/${cartProduct.image}.png`}
               alt={`/database/${cartProduct.alt}`}
               width={400}
@@ -53,7 +56,11 @@ Shopping Cart
             {cartProduct.name}
             <br />
             <p> Price ${cartProduct.price}</p>
-            <p>Quantity: {cartProduct.quantity}</p>
+            <p data-test-id={`cart-product-quantity-${cartProduct.id}`}>
+              Quantity: {cartProduct.quantity}
+            </p>
+            <button>Remove Item</button>
+          </section>
         </div>
       ))}
       <p>
@@ -61,7 +68,8 @@ Shopping Cart
         {totalCartQuantity}
       </p>
       <p> Total Order Price: ${totalCartPrice}</p>
-    </>
+      <button>Checkout</button>
+    </main>
   );
 }
 
