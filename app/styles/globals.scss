@@ -1,0 +1,23 @@
+* {
+  border-radius: 0.25rem;
+  font-family: 'Source Code Pro', monospace;
+}
+body {
+  margin: 0 auto;
+  background-color: lavenderblush;
+  max-width: 1350px;
+}
+h1 {
+  font-size: 1.75em;
+  font-weight: 300;
+  flex: 1;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h6 {
+  color: #666;
+  font-size: 14px;
+}
