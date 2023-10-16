@@ -34,9 +34,11 @@ export default function QuantityButtons(props: Props) {
           data-test-id="product-quantity"
           value={quantity}
           onChange={(event) => {
-            parseInt(event.currentTarget.value) >= 0
-              ? setQuantity(parseInt(event.currentTarget.value))
-              : setQuantity(1);
+            if (parseInt(event.currentTarget.value) >= 0) {
+              setQuantity(parseInt(event.currentTarget.value));
+            } else {
+              setQuantity(1);
+            }
           }}
         />
         <button
