@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-image: url('/images/landing-page.jpg');
+  background-image: url('/images/beerbackground.png');
+  background-size: cover;
+  height: 100vh;
   h1 {
     padding: 2rem;
     font-weight: 600;

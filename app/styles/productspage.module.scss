@@ -10,6 +10,7 @@
     font-weight: 600;
     font-size: 4rem;
     text-align: center;
+    color: #ffffff;
   }
 }
 
@@ -26,7 +27,7 @@
   background-color: #ffffff;
   border-radius: 0.5rem;
 
-  border-left: 0.5rem solid transparent;
+  border: 0.5rem solid transparent;
   transition: border 300ms ease-in-out, padding 300ms ease-in-out;
   align-items: center;
   .buttons {
@@ -58,4 +59,7 @@
   font-size: 2rem;
   padding-top: 1.25rem;
   text-align: center;
+}
+.productLink {
+  border-radius: 0.5rem;
 }

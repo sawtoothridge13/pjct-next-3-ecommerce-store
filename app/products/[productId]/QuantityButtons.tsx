@@ -55,7 +55,7 @@ export default function QuantityButtons(props: Props) {
         }}
       >
         <button
-          className={styles.cartButton}
+          className={styles.addToCartButton}
           data-test-id="product-add-to-cart"
         >
           add to cart

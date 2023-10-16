@@ -28,7 +28,7 @@ export default async function Header() {
         </div>
 
         <div className={styles.headerLinkBox}>
-          <div>
+          <div className={styles.linkText}>
             <Link className={styles.headerLink} href="/about">
               About
             </Link>

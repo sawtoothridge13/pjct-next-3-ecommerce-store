@@ -46,17 +46,16 @@
   border-bottom: 0 solid #dbdbdb;
   text-align: center;
 }
-.cartButton {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: #cfc9e1;
-  background-color: #4a3b76;
+.addToCartButton {
+  font-size: 1.5rem;
+  margin: 8px 0;
+  height: 6rem;
+  width: 15rem;
+  color: #ffffff;
+  background-color: #020202;
   text-transform: uppercase;
   border: none;
   letter-spacing: 2px;
-  font-size: 1.25em;
-  padding: 1.75rem;
-  text-align: center;
   &:focus {
     outline: none;
   }

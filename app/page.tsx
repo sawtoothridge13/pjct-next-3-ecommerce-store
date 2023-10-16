@@ -16,13 +16,15 @@ export default function Home() {
         <h2>
           A premium of adult beverages brewed, vinified, and distilled with the
           tears of software and web developers
+        </h2>
+        <div className={styles['image-container']}>
           <Image
             alt="devBevs logo"
             src="/images/landing-page.jpg"
             width="500"
             height="500"
           />
-        </h2>
+        </div>
       </section>
     </main>
   );
