@@ -1,3 +1,4 @@
+import { config } from 'dotenv';
 import { headers } from 'next/headers';
 import postgres, { Sql } from 'postgres';
 import { setEnvironmentVariables } from '../util/config.mjs';
@@ -7,6 +8,9 @@ setEnvironmentVariables();
 declare module globalThis {
   let postgresSqlClient: Sql;
 }
+
+// for connecting to fly.io
+if (!process.env.FLY_IO) config();
 
 // Connect only once to the database
 // https://github.com/vercel/next.js/issues/7811#issuecomment-715259370
