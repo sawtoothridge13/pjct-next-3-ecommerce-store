@@ -1,33 +1,96 @@
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.section {
+  background-color: #ffffff0d;
+  padding: 2rem; // Adjust padding as needed
+  border-radius: 0.5em;
   justify-content: center;
-  background: #ffffff;
-  // background-image: url('/images/landing-page.jpg');
-  border-radius: 0;
 
-  section {
-    background-color: #ffffff0d;
-    // box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
-    //   0 5px 15px 0 rgba(0, 0, 0, 0.08);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 0.5em;
-    justify-content: center;
+  h1 {
+    font-weight: 600;
+    font-size: xx-large;
+    text-align: center;
+    margin: 1rem; // Adjust margin as needed
+    color: #f1efef;
+  }
+
+  h2 {
+    text-align: justify;
+    color: #f1efef;
+    margin: 1rem; // Adjust margin as needed
+  }
+
+  .imagecontainer {
+    text-align: center;
+    margin: 1rem 0;
+
+    img {
+      max-width: 100%; // Make the image responsive
+      height: auto; // Maintain the aspect ratio
+    }
+  }
+
+  @media (max-width: 768px) {
+    // Adjusted styles for tablets and smaller screens
+    padding: 1rem; // Adjust padding as needed
     h1 {
-      font-weight: 600;
-      font-size: xx-large;
-      text-align: center;
-      margin-top: 3rem;
+      font-size: large; // Adjust font size as needed
+      margin: 0.5rem; // Adjust margin as needed
     }
     h2 {
-      text-align: justify;
-      margin: 2rem 5rem;
+      margin: 0.5rem; // Adjust margin as needed
     }
-    .image-container {
-      text-align: center; /* Center the image horizontally within the container */
-      margin-bottom: 3rem;
+    .imagecontainer {
+      margin: 0.5rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    // Adjusted styles for mobile phones
+    padding: 0.5rem; // Adjust padding as needed
+    h1 {
+      font-size: medium; // Adjust font size as needed
+      margin: 0.25rem; // Adjust margin as needed
+    }
+    h2 {
+      font-size: small;
+      margin: 0.25rem; // Adjust margin as needed
+    }
+    .imagecontainer {
+      margin: 0.25rem 0;
     }
   }
 }
+
+// .main {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+//   background: #ffffff;
+//   // background-image: url('/images/landing-page.jpg');
+//   border-radius: 0;
+
+//   section {
+//     background-color: #ffffff0d;
+//     // box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+//     //   0 5px 15px 0 rgba(0, 0, 0, 0.08);
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//     border-radius: 0.5em;
+//     justify-content: center;
+//     h1 {
+//       font-weight: 600;
+//       font-size: xx-large;
+//       text-align: center;
+
+//       margin: 2rem 5rem;
+//     }
+//     h2 {
+//       text-align: justify;
+//       margin: 2rem 5rem;
+//     }
+//     .imagecontainer {
+//       text-align: center; /* Center the image horizontally within the container */
+//       margin-bottom: 3rem;
+//     }
+//   }
+// }

@@ -1,72 +1,283 @@
-.headerNav {
+.header {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 57%,
     rgba(255, 255, 255, 1) 100%
   );
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none;
-  box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.11),
-    0 4px 16px 0 rgba(253, 253, 253, 0.08);
-  border-radius: 0;
-  margin-bottom: 0;
-  max-width: 1350px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add box shadow if needed
+  padding: 10px 0;
 
-  div {
-    padding: 2em;
-    margin-right: 1.25rem;
-    .headerLogoBox {
-      display: flex;
-      padding-right: 12em;
-      img {
-        padding-left: 4rem;
-      }
-    }
+  @media (max-width: 768px) {
+    // Styles for tablets and smaller screens
+    padding: 10px 20px; // Adjust as needed
   }
-  .headerLinkBox {
-    display: flex;
-    align-items: center;
-    width: auto;
-    padding: 4em;
-    .headerLink {
-      text-decoration: none;
-      color: #ffffff;
-      transition: all 0.2s ease 0s;
-      font-size: 2rem;
-      font-weight: 700;
-      .linkText {
-        font-weight: 100;
-      }
-    }
-    .headerLink:hover {
-      color: #bdb141;
-    }
-    .headerCartLink {
-      position: relative;
-    }
-    .headerCartLogo:hover {
-      background-color: #c1c1c1;
-    }
-    .circle {
-      position: absolute;
-      left: 4em;
-      bottom: 4em;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      background: #fff;
-      border: 3px solid #f40101;
-      padding: 8px !important;
-      line-height: 16px;
-      font-size: 16px;
-      color: #000;
-      text-align: center;
+
+  @media (max-width: 480px) {
+    // Styles for mobile phones
+    padding: 10px 10px; // Adjust as needed
+  }
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    // Styles for tablets and smaller screens
+    flex-direction: column; // Adjust as needed
+  }
+}
+
+.headerLogoBox {
+  a {
+    text-decoration: none;
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }
+
+.headerLinkBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 2rem;
+
+  .headerLink {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #ffffff; // Set your desired link color
+    font-weight: bold;
+    margin-right: 20px;
+
+    &:hover {
+      color: #ffe600; // Set your desired link hover color
+    }
+
+    @media (max-width: 768px) {
+      // Adjusted styles for tablets and smaller screens
+      margin-right: 0; // Adjust as needed
+      margin-bottom: 10px; // Adjust as needed
+    }
+
+    @media (max-width: 480px) {
+      // Adjusted styles for mobile phones
+      font-size: 16px; // Adjust as needed
+    }
+  }
+
+  .headerCartLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #333; // Set your desired link color
+    font-weight: bold;
+    position: relative;
+
+    .headerCartLogo {
+      max-width: 100%;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .circle {
+      background-color: #007bff; // Set your desired circle background color
+      color: #fff; // Set your desired circle text color
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+    }
+
+    &:hover {
+      color: #007bff; // Set your desired link hover color
+    }
+
+    @media (max-width: 480px) {
+      // Adjusted styles for mobile phones
+      font-size: 16px; // Adjust as needed
+    }
+  }
+}
+
+// /* Define your variables for breakpoints (optional) */
+// $small-screen: 576px;
+// $medium-screen: 768px;
+// $large-screen: 992px;
+// $x-large-screen: 1200px;
+
+// .headerNav {
+//   background: rgb(0, 0, 0);
+//   background: linear-gradient(
+//     180deg,
+//     rgba(0, 0, 0, 1) 57%,
+//     rgba(255, 255, 255, 1) 100%
+//   );
+//   display: flex;
+//   align-items: flex-start;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   list-style-type: none;
+//   box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.11),
+//     0 4px 16px 0 rgba(253, 253, 253, 0.08);
+//   border-radius: 0;
+//   margin-bottom: 0;
+//   max-width: 1350px;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   div {
+//     padding: 2em;
+//     margin-right: 1.25rem;
+//     .headerLogoBox {
+//       display: flex;
+//       padding-right: 12em;
+//       img {
+//         padding-left: 4rem;
+//       }
+//     }
+//   }
+//   .headerLinkBox {
+//     display: flex;
+//     align-items: center;
+//     width: auto;
+//     padding: 4em;
+//     .headerLink {
+//       text-decoration: none;
+//       color: #ffffff;
+//       transition: all 0.2s ease 0s;
+//       font-size: 2rem;
+//       font-weight: 700;
+//       .linkText {
+//         font-weight: 100;
+//       }
+//     }
+//     .headerLink:hover {
+//       color: #bdb141;
+//     }
+//     .headerCartLink {
+//       position: relative;
+//     }
+//     .headerCartLogo:hover {
+//       background-color: #c1c1c1;
+//     }
+//     .circle {
+//       position: absolute;
+//       left: 4em;
+//       bottom: 4em;
+//       border-radius: 50%;
+//       width: 16px;
+//       height: 16px;
+//       background: #fff;
+//       border: 3px solid #f40101;
+//       padding: 8px !important;
+//       line-height: 16px;
+//       font-size: 16px;
+//       color: #000;
+//       text-align: center;
+//     }
+//   }
+//   @media screen and (max-width: $small-screen) {
+//     /* Styles for small screens */
+
+//     .headerNav {
+//       background: rgb(0, 0, 0);
+//       background: linear-gradient(
+//         180deg,
+//         rgba(0, 0, 0, 1) 57%,
+//         rgba(255, 255, 255, 1) 100%
+//       );
+//       display: flex;
+//       align-items: flex-start;
+//       flex-wrap: wrap;
+//       justify-content: space-between;
+//       list-style-type: none;
+//       box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.11),
+//         0 4px 16px 0 rgba(253, 253, 253, 0.08);
+//       border-radius: 0;
+//       margin-bottom: 0;
+//       max-width: 1vw;
+//       margin-left: auto;
+//       margin-right: auto;
+
+//       div {
+//         padding: 2em;
+//         margin-right: 1.25rem;
+//         justify-content: center;
+//         .headerLogoBox {
+//           display: flex;
+//           padding-right: 12em;
+//           img {
+//             padding-left: 4rem;
+//           }
+//         }
+//       }
+//       .headerLinkBox {
+//         display: flex;
+//         align-items: center;
+//         width: auto;
+//         padding: 4em;
+//         .headerLink {
+//           text-decoration: none;
+//           color: #ffffff;
+//           transition: all 0.2s ease 0s;
+//           font-size: 2rem;
+//           font-weight: 700;
+//           .linkText {
+//             font-weight: 100;
+//           }
+//         }
+//         .headerLink:hover {
+//           color: #bdb141;
+//         }
+//         .headerCartLink {
+//           position: relative;
+//         }
+//         .headerCartLogo:hover {
+//           background-color: #c1c1c1;
+//         }
+//         .circle {
+//           position: absolute;
+//           left: 4em;
+//           bottom: 4em;
+//           border-radius: 50%;
+//           width: 16px;
+//           height: 16px;
+//           background: #fff;
+//           border: 3px solid #f40101;
+//           padding: 8px !important;
+//           line-height: 16px;
+//           font-size: 16px;
+//           color: #000;
+//           text-align: center;
+//         }
+//       }
+
+//       @media screen and (max-width: $small-screen) {
+//         /* Styles for small screens */
+//       }
+//     }
+
+//     /* Use media queries with variables */
+
+//     @media screen and (max-width: $small-screen) {
+//       /* Styles for small screens */
+//     }
+
+//     @media screen and (min-width: $medium-screen) and (max-width: $large-screen) {
+//       /* Styles for medium screens */
+//     }
+
+//     @media screen and (min-width: $large-screen) {
+//       /* Styles for large screens and above */
+//     }
+//   }
+// }
